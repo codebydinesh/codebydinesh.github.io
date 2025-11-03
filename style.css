@@ -292,7 +292,6 @@ body, html {
 /* For Tablets */
 @media (max-width: 980px) {
   .hero {
-    height: auto;
     flex-direction: column;
     justify-content: center;
     padding: 20px;
@@ -327,7 +326,6 @@ body, html {
 /* For Mobile */
 @media (max-width: 767px) {
   .hero {
-    height: auto;
     padding: 15px;
   }
 
