@@ -166,9 +166,6 @@ body, html {
   bottom: 20px; /* Adjust the distance from the bottom */
   left: 50%;
   transform: translateX(-50%); /* Center horizontally */
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 #section10 a {
