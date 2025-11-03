@@ -25,9 +25,6 @@ body, html {
   max-width: 1200px; /* Set max-width for content */
   margin: 0 auto; /* Center the container */
   padding: 0 15px; /* Add padding on the sides */
-  display: flex;
-  flex-direction: column; /* Stack elements vertically */
-  align-items: center; /* Center items horizontally */
 }
 
 /* Hero Section */
