@@ -16,88 +16,153 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <section id="home" class="hero">
-    <header>
+
+  <header>
+
+    <div class="container">
+
       <div class="logo"><a href="/" aria-label="Homepage"><img src="images/logo.png" alt="Dinesh Logo"></a></div>
-    </header>
-    <div class="content">
-      <h1>Frontend Developer</h1>
-      <p>I build pixel-perfect, engaging, and accessible digital experiences.</p>
-      <div class="buttons">
-        <a href="https://wa.link/fygbqo" class="cta-button hire-button" target="_blank">Hire Me</a>
-      </div>
+
     </div>
+
+  </header>
+
+  <section id="home" class="hero">
+
+    <div class="content">
+
+      <h1>Frontend Developer</h1>
+
+      <p>I build pixel-perfect, engaging, and accessible digital experiences.</p>
+
+      <div class="buttons">
+
+        <a href="https://wa.link/fygbqo" class="cta-button hire-button" target="_blank">Hire Me</a>
+
+      </div>
+
+    </div>
+
     <section id="section10" class="demo">
+
       <a href="#portfolio"><span></span>Scroll</a>
+
     </section>
+
   </section>
 
   <!-- Portfolio Section -->
   <section id="portfolio" class="portfolio">
+
     <div class="container">
+
       <h2>My Work</h2>
+
       <p>Here are some of the projects I’ve worked on.</p>
+
       <div class="portfolio-grid">
+
         <!-- Portfolio Item 1 -->
         <div class="portfolio-item">
+
           <img src="images/rahul-clay-laptop.png" alt="Project 1 - Rahul Clay Studio" loading="lazy">
+
           <div class="portfolio-overlay">
+
             <a href="https://rahulclaystudio.com" target="_blank" class="view-button">Visit Site</a>
+
           </div>
+
         </div>
 
         <!-- Portfolio Item 2 -->
         <div class="portfolio-item">
+
           <img src="images/azza-2.png" alt="Project 2 - Azza Design" loading="lazy">
+
           <div class="portfolio-overlay">
+
             <a href="https://azzadesign.com" target="_blank" class="view-button">Visit Site</a>
+
           </div>
+
         </div>
 
         <!-- Portfolio Item 3 -->
         <div class="portfolio-item">
+
           <img src="images/white-poss-laptop.png" alt="Project 3 - White Possibilities" loading="lazy">
+
           <div class="portfolio-overlay">
+
             <a href="https://whitepossibilities.com/" target="_blank" class="view-button">Visit Site</a>
+
           </div>
+
         </div>
 
         <!-- Portfolio Item 4 -->
         <div class="portfolio-item">
+
           <img src="images/andy-web-page-lap-mock-1.png" alt="Project 4 - Anuja" loading="lazy">
+
           <div class="portfolio-overlay">
+
             <a href="https://anuja.com" target="_blank" class="view-button">Visit Site</a>
+
           </div>
+
         </div>
 
         <!-- Portfolio Item 5 -->
         <div class="portfolio-item">
+
           <img src="images/aura-pottery-laptop-1.png" alt="Project 5 - Aura Pottery" loading="lazy">
+
           <div class="portfolio-overlay">
+
             <a href="https://aurapottery.com" target="_blank" class="view-button">Visit Site</a>
+
           </div>
+
         </div>
 
         <!-- Portfolio Item 6 -->
         <div class="portfolio-item">
+
           <img src="images/vallery-laptop.png" alt="Project 6 - Art by Vallery" loading="lazy">
+
           <div class="portfolio-overlay">
+
             <a href="https://www.artbyvallery.com/" target="_blank" class="view-button">Visit Site</a>
+
           </div>
+
         </div>
 
       </div>
+
     </div>
+
   </section>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
   <script>
+
     $(function() {
+
       $('a[href*=#]').on('click', function(e) {
+
         e.preventDefault();
+
         $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+        
       });
+
     });
+
   </script>
+
 </body>
 </html>
