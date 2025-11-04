@@ -1,4 +1,3 @@
-/* Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -17,11 +16,10 @@ body, html {
   scroll-behavior: smooth;
 }
 
-/* Container for Width Control */
 .container {
-  max-width: 1200px; /* Set max-width for content */
-  margin: 0 auto; /* Center the container */
-  padding: 0 15px; /* Add padding on the sides */
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 0 15px; 
 }
 
 header{
@@ -274,12 +272,6 @@ header{
 
 /* For Tablets */
 @media (max-width: 980px) {
-  .hero {
-    flex-direction: column;
-    justify-content: center;
-    padding: 20px;
-  }
-
   .logo {
     margin-bottom: 20px;
   }
@@ -304,8 +296,8 @@ header{
 
 /* For Mobile */
 @media (max-width: 767px) {
-  .hero {
-    padding: 15px;
+  .logo img{
+    max-width: 90px;
   }
 
   .logo {
