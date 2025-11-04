@@ -272,10 +272,6 @@ header{
 
 /* For Tablets */
 @media (max-width: 980px) {
-  .logo {
-    margin-bottom: 20px;
-  }
-
   .hero .content h1 {
     font-size: 40px;
   }
@@ -298,10 +294,6 @@ header{
 @media (max-width: 767px) {
   .logo img{
     max-width: 90px;
-  }
-
-  .logo {
-    margin-bottom: 10px;
   }
 
   .hero .content h1 {
