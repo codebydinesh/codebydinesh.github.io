@@ -320,6 +320,10 @@ header{
   #section10{
     bottom: 80px;
   }
+
+  .portfolio {
+    padding: 40px 0;
+  }
   
   .portfolio h2{
     font-size: 28px;
