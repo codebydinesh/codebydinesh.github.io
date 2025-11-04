@@ -281,11 +281,7 @@ header{
     margin-bottom: 30px;
   }
 
-  .hero .content .buttons .btn {
-    padding: 0.6em 1.5em;
-  }
-
-  .hero .content .buttons .hire-button {
+  .hero .content .buttons .btn .hire-button {
     padding: 12px 30px;
   }
 }
@@ -307,11 +303,7 @@ header{
     margin-bottom: 20px;
   }
 
-  .hero .content .buttons .btn {
-    padding: 0.5em 1.2em;
-  }
-
-  .hero .content .buttons .hire-button {
+  .hero .content .buttons .btn .hire-button {
     padding: 10px 25px;
   }
 
