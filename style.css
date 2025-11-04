@@ -24,11 +24,14 @@ body, html {
   padding: 0 15px; /* Add padding on the sides */
 }
 
+header{
+  padding: 10px 0;
+}
+
 /* Hero Section */
 .hero {
   height: 100vh;
   text-align: center;
-  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,13 +42,9 @@ body, html {
   max-width: 100px;
 }
 
-.hero .content {
-  max-width: 900px;
-  padding: 20px;
-}
-
 .hero .content h1 {
   font-size: 60px;
+  line-height: 68px;
   margin-bottom: 20px;
   font-weight: 800;
   color: #eef5ff;
@@ -58,13 +57,7 @@ body, html {
   margin-bottom: 40px;
 }
 
-.hero .content .buttons {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-}
-
-.hero .content .buttons .cta-button {
+.hero .content .buttons .btn {
   padding: 0.6em 2em;
   text-decoration: none;
   border: none;
@@ -76,12 +69,12 @@ body, html {
   z-index: 0;
   border-radius: 10px;
   user-select: none;
-  -webkit-user-select: none;
   touch-action: manipulation;
   transition: all 0.3s ease-in-out;
+  display: inline-block;
 }
 
-.hero .content .buttons .cta-button:before {
+.hero .content .buttons .btn:before {
   content: "";
   background: linear-gradient(45deg, #e4e4e4, #f4f4f4, #d1d79e, #92d6c7, #82a7c9, #4c6e99, #6f6f6f, #a87f99, #c77e6e);
   position: absolute;
@@ -90,7 +83,6 @@ body, html {
   background-size: 400%;
   z-index: -1;
   filter: blur(5px);
-  -webkit-filter: blur(5px);
   width: calc(100% + 4px);
   height: calc(100% + 4px);
   animation: glowing-button 20s linear infinite;
@@ -110,7 +102,7 @@ body, html {
   }
 }
 
-.hero .content .buttons .cta-button:after {
+.hero .content .buttons .btn:after {
   z-index: -1;
   content: "";
   position: absolute;
@@ -122,13 +114,13 @@ body, html {
   border-radius: 50px;
 }
 
-.hero .content .buttons .cta-button:hover {
+.hero .content .buttons .btn:hover {
   animation: glowing-button 20s linear infinite;
   transform: scale(1.05);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
-.hero .content .buttons .hire-button {
+.hero .content .buttons .btn .hire-button {
   background: transparent;
   padding: 14px 40px;
   border-radius: 50px;
@@ -136,19 +128,19 @@ body, html {
   transition: all 0.3s ease-in-out;
 }
 
-.hero .content .buttons .hire-button:hover {
+.hero .content .buttons .btn .hire-button:hover {
   background: transparent;
   animation: glowing-button 20s linear infinite;
   transform: scale(1.05);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
-.hero .content .buttons .cta-button i {
+.hero .content .buttons .btn i {
   margin-right: 10px;
   font-size: 1.5rem;
 }
 
-.hero .content .buttons .cta-button:focus {
+.hero .content .buttons .btn:focus {
   outline: none;
   border: 2px solid #ff6f61;
   box-shadow: 0 0 5px rgba(255, 87, 34, 0.7);
@@ -156,10 +148,10 @@ body, html {
 
 /* Scroll Button Styles */
 #section10 {
-  position: absolute; /* Position at the bottom */
-  bottom: 20px; /* Adjust the distance from the bottom */
+  position: absolute; 
+  bottom: 20px; 
   left: 50%;
-  transform: translateX(-50%); /* Center horizontally */
+  transform: translateX(-50%); 
 }
 
 #section10 a {
@@ -301,11 +293,7 @@ body, html {
     margin-bottom: 30px;
   }
 
-  .hero .content .buttons {
-    flex-direction: column;
-  }
-
-  .hero .content .buttons .cta-button {
+  .hero .content .buttons .btn {
     padding: 0.6em 1.5em;
   }
 
@@ -325,8 +313,9 @@ body, html {
   }
 
   .hero .content h1 {
-    font-size: 32px;
-    margin-bottom: 10px;
+    font-size: 42px;
+    line-height: 46px;
+    margin-bottom: 15px;
   }
 
   .hero .content p {
@@ -334,7 +323,7 @@ body, html {
     margin-bottom: 20px;
   }
 
-  .hero .content .buttons .cta-button {
+  .hero .content .buttons .btn {
     padding: 0.5em 1.2em;
   }
 
