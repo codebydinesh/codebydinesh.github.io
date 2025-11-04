@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   background-color: #000c20;
   color: #eef5ff;
 }
@@ -26,18 +26,28 @@ header{
   padding: 10px 0;
 }
 
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar img{
+  max-width: 100px;
+}
+
+.navbar .social-media img{
+  max-width: 22px;
+}
+
 /* Hero Section */
 .hero {
-  height: 100vh;
+  height: calc(100vh - 90px);
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-}
-
-.logo img{
-  max-width: 100px;
 }
 
 .hero .content h1 {
@@ -51,7 +61,6 @@ header{
 .hero .content p {
   font-size: 16px;
   line-height: 24px;
-  font-weight: 500;
   color: #b9b9b9;
   margin-bottom: 40px;
 }
@@ -148,7 +157,7 @@ header{
 /* Scroll Button Styles */
 #section10 {
   position: absolute; 
-  bottom: 20px; 
+  bottom: 10px; 
   left: 50%;
   transform: translateX(-50%); 
 }
@@ -289,7 +298,7 @@ header{
 
 /* For Mobile */
 @media (max-width: 767px) {
-  .logo img{
+  .navbar img{
     max-width: 90px;
   }
 
@@ -306,10 +315,6 @@ header{
 
   .hero .content .buttons .btn .hire-button {
     padding: 10px 25px;
-  }
-
-  #section10{
-    bottom: 100px;
   }
   
   .portfolio h2{
