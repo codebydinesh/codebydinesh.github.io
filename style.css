@@ -316,6 +316,10 @@ header{
   .hero .content .buttons .btn .hire-button {
     padding: 10px 25px;
   }
+
+  #section10{
+    bottom: 100px;
+  }
   
   .portfolio h2{
     font-size: 28px;
