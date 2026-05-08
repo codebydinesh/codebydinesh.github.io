@@ -46,6 +46,8 @@
 
       <div class="content">
 
+        <canvas id="portfolio-bubble-canvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999;"></canvas>
+
         <h1>Frontend Developer</h1>
 
         <p>I build pixel-perfect, engaging, and accessible digital experiences.</p>
@@ -190,43 +192,89 @@
 
   <script>
 
-    $(function() {
+    (function() {
+    const init = () => {
+        // 1. Try to find the canvas
+        let canvas = document.getElementById('splash-cursor-canvas');
 
-      $('a[href="#portfolio"]').on('click', function(e) {
+        // 2. If it's not there, create it automatically
+        if (!canvas) {
+            canvas = document.createElement('canvas');
+            canvas.id = 'splash-cursor-canvas';
+            document.body.appendChild(canvas);
+        }
 
-        e.preventDefault();
+        // 3. Apply the necessary styles via JS to be safe
+        Object.assign(canvas.style, {
+            position: 'fixed',
+            top: '0',
+            left: '0',
+            width: '100vw',
+            height: '100vh',
+            pointerEvents: 'none',
+            zIndex: '9999'
+        });
 
-        $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
-        
-      });
+        const ctx = canvas.getContext('2d');
+        let particles = [];
 
-    });
+        const resize = () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        };
+        window.addEventListener('resize', resize);
+        resize();
 
-  </script>
+        // 4. The bubble logic you liked
+        window.addEventListener('mousemove', (e) => {
+            for (let i = 0; i < 2; i++) {
+                particles.push({
+                    x: e.clientX,
+                    y: e.clientY,
+                    s: Math.random() * 5 + 5, 
+                    vx: (Math.random() - 0.5) * 1.8,
+                    vy: (Math.random() - 0.5) * 1.8,
+                    a: 0.7 
+                });
+            }
+        });
 
-  <canvas id="splash-canvas" style="
-          width: 100vw;
-          height: 100vh;
-          display: block;
-          pointer-events: none;
-          position: fixed;
-          z-index: 50;
-          top: 0;
-          left: 0;
-        " width="1360" height="290">
-    </canvas>
+        const animate = () => {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = '#eef5ff';
+            
+            for (let i = 0; i < particles.length; i++) {
+                let p = particles[i];
+                p.x += p.vx;
+                p.y += p.vy;
+                p.a -= 0.012;
+                p.s -= 0.05;
 
-  <script>
+                if (p.a <= 0 || p.s <= 0.1) {
+                    particles.splice(i, 1);
+                    i--;
+                    continue;
+                }
 
-  document.addEventListener('DOMContentLoaded', () => {
+                ctx.globalAlpha = p.a;
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.s, 0, 6.28);
+                ctx.fill();
+            }
+            requestAnimationFrame(animate);
+        };
 
-    splashCursor({
+        animate();
+    };
 
-      CANVAS_SELECTOR: 'splash-canvas',
+    // Run when the page is ready
+    if (document.readyState === 'complete') {
+        init();
+    } else {
+        window.addEventListener('load', init);
+    }
+})();
 
-    });
-      
-  });
   </script>
 
 </body>
