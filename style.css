@@ -80,6 +80,8 @@ header{
   touch-action: manipulation;
   transition: all 0.3s ease-in-out;
   display: inline-block;
+  -webkit-background-clip: padding-box; 
+  background-clip: padding-box;
 }
 
 .hero .content .buttons .btn:before {
@@ -96,6 +98,9 @@ header{
   animation: glowing-button 20s linear infinite;
   transition: opacity 0.3s ease-in-out;
   border-radius: 50px;
+  will-change: filter;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 @keyframes glowing-button {
@@ -120,23 +125,10 @@ header{
   left: 0;
   top: 0;
   border-radius: 50px;
+  -webkit-border-radius: 50px;
 }
 
-.hero .content .buttons .btn:hover {
-  animation: glowing-button 20s linear infinite;
-  transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-}
-
-.hero .content .buttons .btn .hire-button {
-  background: transparent;
-  padding: 14px 40px;
-  border-radius: 50px;
-  border: 3px solid transparent;
-  transition: all 0.3s ease-in-out;
-}
-
-.hero .content .buttons .btn .hire-button:hover {
+.hero .content .buttons .btn.hire-button:hover {
   background: transparent;
   animation: glowing-button 20s linear infinite;
   transform: scale(1.05);
